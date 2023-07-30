@@ -1,0 +1,61 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ENTRAR</title>
+<link href="pjs.css" rel="stylesheet" type="text/css" media="all and (min-width:961px)" >
+<link href="pjs_mobile.css" rel="stylesheet" type="text/css" media="all and (max-width:320px)" >
+ <link href="pjs_tablet.css" rel="stylesheet" type="text/css" media="all and (min-width:321px) and (max-width:960px)">
+<script language="JavaScript">
+function exibesenha()
+{
+if (document.getElementById("iconsenha").attributes["type"] = "password")
+	{document.getElementById('iconsenha').type = 'text';}
+	else
+	if(document.getElementById("iconsenha").attributes["type"] = "text")
+	{document.getElementById('iconsenha').type = 'password';}
+	
+	
+}
+
+function funcao_senha()
+{
+
+
+
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body bgcolor="#f3f3f3">
+
+<div style="top:0;">
+
+<div id="div_topo_entrar_cadastrar" style="top:0; left:0; right:0; height:35px; width: 100%; background:#0099FF; position:fixed; z-index:2;opacity:0.75;" >
+<div>
+<a href="index.html"><img src="imagens/seta_esquerda_cadastrar.png" style="margin-left: 4%; margin-top:10px;"></a>
+</div>
+<p align="center" style="color:#ffffff;margin-top:-21px; font-size:18px;">Entre com a sua conta!</p>
+</div><br><br><br> 
+
+<div id="div_cadastrar_form" style="width:100%; padding-top:5px;">
+<form action="login_processa.php" method="post" name="dados" align="center">
+   <input type="email" id="iconemail" name="email" placeholder="E-mail" value="" required autofocus><br><br>     
+   <input id="iconsenha" name="senha" type="password"  placeholder="Digite uma Senha" title="Senha" required autofocus onClick="funcao_senha(event)"> <br><br> 
+<button  type="submit" class="btnpronto">Entrar</button><br><br>
+</div><br>
+
+
+
+</form>
+
+</div>
+
+<div id="div_cadastrar_rodape" style=" bottom:0; left:0; right:0; height:35px; width: 100%; background:#0099FF; position:fixed;" >
+
+</div>
+
+</body>
+</html>

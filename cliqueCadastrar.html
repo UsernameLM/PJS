@@ -1,0 +1,59 @@
+﻿
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Cadastro</title>
+<link href="pjs.css" rel="stylesheet" type="text/css" media="all and (min-width:961px)" >
+<link href="pjs_mobile.css" rel="stylesheet" type="text/css" media="all and (max-width:320px)" >
+<link href="pjs_tablet.css" rel="stylesheet" type="text/css" media="all and (min-width:321px) and (max-width:960px)">
+<script language="javascript">
+function verificasenha()
+{
+	if(document.dados.senha.value != document.dados.senha2.value)
+	{
+		alert("Senhas não coincidem!");
+		document.dados.senha2.focus();
+		return false;
+	}
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body bgcolor="#F3F3F3">
+
+<div style="top:0;">
+
+<div id="div_topo_entrar_cadastrar" style="top:0; left:0; right:0; height:35px; width: 100%; background:#0099FF; position:fixed; z-index:2; opacity:0.75;" >
+<div>
+<a href="index.html"><img src="imagens/seta_esquerda_cadastrar.png" style="margin-left: 4%; margin-top:10px;"></a>
+</div>
+<p align="center" style="color:#ffffff;margin-top:-21px; font-size:18px;">Crie a sua conta!</p>
+</div><br><br><br> 
+
+
+<div id="div_cadastrar_form" style="width:100%; padding-top:5px;">
+   <form action="cadastro_processa.php" method="post" name="dados" align="center" onSubmit="return verificasenha()">
+   <input  type="text" id="iconnome" name="nome" placeholder="Nome" required autofocus><br><br>        
+   <input type="email" id="iconemail" name="email" placeholder="E-mail" value="" required autofocus><br><br>     
+   <input id="iconsenha" name="senha" type="password"  placeholder="Digite uma Senha" title="Senha" required autofocus> <br><br> 
+   <input id="iconsenha" name="senha2" type="password"  placeholder="Repetir Senha" title="Repetir Senha" required autofocus><br><br>
+<button type="submit" class="btnpronto">Cadastrar</button><br><br></div><br>
+
+<a href="cliqueEntrar.html" style=" text-decoration: none; color:#0099FF;">
+<p align="center">JÁ POSSUI UMA CONTA? ENTRE</p>
+</a>
+</form>
+</div>
+
+<div id="div_cadastrar_rodape" style=" bottom:0; left:0; right:0; height:35px; width: 100%; background:#0099FF; position:fixed;" >
+
+</div>
+
+</body>
+</html>

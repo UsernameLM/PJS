@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="cssPOP.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="pjs.css" rel="stylesheet" type="text/css" media="all and (min-width:961px)" >
+<link href="pjs_mobile.css" rel="stylesheet" type="text/css" media="all and (max-width:320px)" >
+ <link href="pjs_tablet.css" rel="stylesheet" type="text/css" media="all and (min-width:321px) and (max-width:960px)">
+<title>Untitled Document</title>
+<script type="text/javascript">
+function funcao_div_esquerda()
+{
+document.getElementById("div_canto_esquerdo").style.visibility = "visible";
+document.getElementById("div_filtro_ordem_alfa").style.visibility = "visible";
+document.getElementById("div_filtro_menor_valor").style.visibility = "visible";
+document.getElementById("div_filtro_maior_valor").style.visibility = "visible";
+document.getElementById("div_titulo_filtro").style.visibility = "visible";
+document.getElementById("div_filtro_favoritos").style.visibility = "visible";
+
+}
+function clica_alfabetica()
+{
+ document.getElementById("div_categoria").style.visibility = "visible";
+  document.getElementById("div_descricao").style.visibility = "visible";
+}
+function funcao_fecha_div_esquerda()
+{
+document.getElementById("div_canto_esquerdo").style.display = "none";
+document.getElementById("div_filtro_ordem_alfa").style.visibility = "hidden";
+document.getElementById("div_filtro_menor_valor").style.visibility = "hidden";
+document.getElementById("div_filtro_maior_valor").style.visibility = "hidden";
+document.getElementById("div_titulo_filtro").style.visibility = "hidden";
+document.getElementById("div_categoria").style.visibility = "hidden";
+document.getElementById("div_descricao").style.visibility = "hidden";
+document.getElementById("div_filtro_favoritos").style.visibility = "hidden";
+document.getElementById("div_escura").style.visibility = "hidden";
+
+}
+function funcao_div_escura()
+{  
+document.getElementById("div_escura").style.visibility = "visible";
+
+}
+</script>
+</head>
+
+<body>
+
+
+
+<br>
+<div id="div_canto_esquerdo" style="top:0; left:0; position:fixed;  z-index:4; background-color: #D1D1D1; height:100%; width:30%; visibility:hidden; box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71) ">
+<br>
+<img src="imagens/cancelar.png"   style="float:right; margin-right:10%; margin-top:-1%;" onClick="funcao_fecha_div_esquerda()"></img>
+<br><br><br>
+
+<div id="div_titulo_filtro" style="top:0; left:0; position:fixed;  z-index:4; background-color: #D1D1D1; height:2%; width:30%; visibility:hidden;  "><br><br><p align="center" style="color:#FFFFFF"><br>Filtrar por</p>
+</div>
+<br>
+<div  id="div_filtro_favoritos" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:10%; width:30%; visibility: hidden;box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71)  "><br><p align="center" style="color:#FFFFFF">Favoritos</p></div>
+<br><br><br>
+
+<div  id="div_filtro_maior_valor" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:10%; width:30%; visibility:hidden;box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71)  "><p align="center" style="color:#FFFFFF"><br>Maior valor</p></div>
+<br><br><br>
+
+<div  id="div_filtro_menor_valor" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:10%; width:30%; visibility: hidden;box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71)  "><br><p align="center" style="color:#FFFFFF">Menor Valor</p></div>
+<br><br><br>
+
+<div  id="div_filtro_ordem_alfa" onClick="clica_alfabetica()" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:15%; width:30%; visibility: hidden; box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71) "><p align="center" style="color:#FFFFFF">Ordem Alfabética</p></div>
+<br><br><br>
+
+<div id="div_descricao" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:10%; width:30%; visibility:hidden; box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71) "><br><p align="center" style="color:#FFFFFF">Categoria</p></div>
+<br><br><br>
+<div id="div_categoria" style="left:0; position:fixed;  z-index:4; background-color: #C5C5C5; height:10%; width:30%; visibility:hidden; box-shadow:0px 0px 12px 0px rgba(47, 50, 50, 0.71) "><br><p align="center" style="color:#FFFFFF">Descrição</p></div>
+<br><br><br>
+</div>
+
+<div style="width:100%;">
+<div id="div_homepage" style="background-color:#ff0000; ">
+<a href="principal.html" style="text-decoration:none">
+<img id="img_homepage" src="imagens/homepage.png"></img>
+</a>
+
+<img id="img_configuracoes" src="imagens/configuracoes.png" onClick="funcao_div_esquerda(), funcao_div_escura()"></img>
+
+<img id="img_checkbox" src="imagens/checkbox.png"></img>
+<img id="img_lixeira" src="imagens/lixeira.png"></img>
+</div>
+
+<div id="div_lista_receita_despesa" style="background-color:#ff0000;">
+
+<div id="div_titulo_lista">
+<label for="div_lista_receita_despesa" id="titulo_lista">
+<b>Despesas</b>
+</label>
+</div>
+
+</div>
+
+<div id="div2_lista_receita_despesa" style="background-color:#ff0000; ">
+
+<div id="div_img_setaesquerda_lista">
+<form action="lista_despesas_m.php" method="POST">
+<input type ="image" src="imagens/seta_esquerda.png"/>
+<input type="hidden" name="seta" value="<?php echo -1;?>"/>
+</form>
+</div>
+
+<div id="div_subtitulo_lista">
+<label for="div2_lista" id="subtitulo_lista">
+<!--<?php
+echo $meses[$data - 1];
+?>-->
+</label>
+</div>
+
+<div id="div_img_setadireita_lista">
+<form action="lista_despesas_m.php" method="POST">
+<input type ="image" src="imagens/seta_direita.png"/>
+<input type="hidden" name="seta" value="<?php echo 1;?>"/>
+</form>
+</div>
+</div>
+
+
+
+</div>
+
+<div id="div_escura" style="height:100%; width:100%; background-color:rgba(0, 0, 0, 0.5); position: fixed;top: 0;left: 0;   visibility: hidden; ">
+</div>
+
+</body>
+</html>
